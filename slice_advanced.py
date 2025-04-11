@@ -1,6 +1,7 @@
-texto = input("Ingresá un texto: ")
+def slice_from_fifth(texto):
+    return texto[4::2]
 
-# Obtener caracteres desde el quinto (índice 4) en adelante, saltando de a 2
-resultado = texto[4::2]
-
-print(resultado)
+if __name__ == "__main__":
+    texto = input("Ingresá un texto: ")
+    resultado = slice_from_fifth(texto)
+    print(resultado)
