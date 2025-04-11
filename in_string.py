@@ -1,5 +1,5 @@
-def check_vowels():
-    nombre = input("Ingresá un nombre: ").lower()
+def check_vowels(nombre):
+    nombre = nombre.lower()
 
     a = "a"
     e = "e"
@@ -7,10 +7,16 @@ def check_vowels():
     o = "o"
     u = "u"
 
-    print(f"Contiene {a}: {a in nombre}")
-    print(f"Contiene {e}: {e in nombre}")
-    print(f"Contiene {i}: {i in nombre}")
-    print(f"Contiene {o}: {o in nombre}")
-    print(f"Contiene {u}: {u in nombre}")
+    return {
+        "a": a in nombre,
+        "e": e in nombre,
+        "i": i in nombre,
+        "o": o in nombre,
+        "u": u in nombre
+    }
 
-check_vowels()
+if __name__ == "__main__":
+    nombre = input("Ingresá un nombre: ")
+    resultados = check_vowels(nombre)
+    for vocal, presente in resultados.items():
+        print(f"Contiene {vocal}: {presente}")
