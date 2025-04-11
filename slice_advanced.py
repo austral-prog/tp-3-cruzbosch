@@ -1,7 +1,4 @@
-def slice_from_fifth(texto):
-    return texto[4::2]
-
-if __name__ == "__main__":
+def slice_advanced():
     texto = input("Ingresá un texto: ")
-    resultado = slice_from_fifth(texto)
+    resultado = texto[4::2]
     print(resultado)
